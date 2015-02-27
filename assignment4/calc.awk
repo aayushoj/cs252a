@@ -37,4 +37,12 @@ END{
     for(i=3;i<=NF;i++)
     printf("%d|",min[i])
     printf("%d\n",min_of_sum);
+
+    for(i=3;i<=NF;i++)
+    printf("%d|",max[i])
+    printf("%d\n",max_of_sum);
+
+    for(i=3;i<=NF;i++)
+    printf("%f|",sumc[i]/NR)
+    printf("%f\n",sum_of_sum/NR);
 }
