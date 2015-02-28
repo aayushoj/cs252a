@@ -34,15 +34,30 @@ BEGIN { total= 0; FS="|"; OFS="|" }
           sum_of_sq_sum=sum_of_sq_sum+sum*sum;
       }
 END{
+    printf("%-6s |%-6s |","max"," ");
     for(i=3;i<=NF;i++)
-    printf("%d|",min[i])
-    printf("%d\n",min_of_sum);
+    printf("%6d |",max[i])
+    printf("%6d\n",max_of_sum);
 
+    printf("%-6s |%-6s |","min"," ");
     for(i=3;i<=NF;i++)
-    printf("%d|",max[i])
-    printf("%d\n",max_of_sum);
+    printf("%6d |",min[i])
+    printf("%6d\n",min_of_sum);
 
+
+    printf("%-6s |%-6s |","mean"," ");
     for(i=3;i<=NF;i++)
-    printf("%f|",sumc[i]/NR)
-    printf("%f\n",sum_of_sum/NR);
+    printf("%6.2f |",sumc[i]/NR)
+    printf("%6.2f\n",sum_of_sum/NR);
+
+    printf("%-6s |%-6s |","sd"," ");
+    for(i=3;i<=NF;i++)
+    {
+        avg[i]=sumc[i]/NR;
+        avgsq[i]=sumsqc[i]/NR;
+        printf("%6.2f |",sqrt(avgsq[i]-avg[i]*avg[i] ));
+    }
+    avgl=sum_of_sum/NR;
+    avglsq=sum_of_sq_sum/NR;
+    printf("%6.2f\n",sqrt(avglsq-avgl*avgl));
 }
