@@ -3,8 +3,10 @@ BEGIN { total= 0; FS="|"; OFS="|" }
       {
           i=0;
           sum=0;
+          printf("%4s|%4s|",$1,$2);
           for (i = 3; i <= NF; i++) 
           {
+              printf("%6d |",$i);
               if(i==0) sum=0;
               sum=sum+$i;
               if(NR==1)
@@ -19,7 +21,8 @@ BEGIN { total= 0; FS="|"; OFS="|" }
               if(max[i]<$i)
                   max[i]=$i;
           }
-          print $0,sum;
+          printf("%6d\n",sum);
+          #print $0,sum;
           if(NR==1)
           {
               max_of_sum=sum;
