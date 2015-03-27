@@ -30,3 +30,35 @@ plot "bino5.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notit
 set yrange [0:150000]
 set output "hist_bino6.eps"
 plot "bino6.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+#poisson distribution
+set yrange [0:150]
+set output "hist_poiss3.eps"
+plot "poiss3.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:1500]
+set output "hist_poiss4.eps"
+plot "poiss4.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:15000]
+set output "hist_poiss5.eps"
+plot "poiss5.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:150000]
+set output "hist_poiss6.eps"
+plot "poiss6.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+#normal distribution
+set yrange [0:150]
+set output "hist_norm3.eps"
+plot "norm3.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:1500]
+set output "hist_norm4.eps"
+plot "norm4.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:15000]
+set output "hist_norm5.eps"
+plot "norm5.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
+
+set yrange [0:150000]
+set output "hist_norm6.eps"
+plot "norm6.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
