@@ -9,25 +9,24 @@ set xrange [min:max]
 #to put an empty boundary around the
 #data inside an autoscaled graph.
 set offset graph 0.05,0.05,0.05,0.0
-set xtics min,(max-min)/5,max
 set boxwidth width*0.9
 set style fill solid 0.5 #fillstyle
-set tics out nomirror
 set xlabel "x"
 set ylabel "Frequency"
+set xtics 5
 #count and plot
 set yrange [0:150]
 set output "hist_bino3.eps"
-plot "bino3.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"green" notitle
+plot "bino3.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
 
 set yrange [0:1500]
 set output "hist_bino4.eps"
-plot "bino4.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"green" notitle
+plot "bino4.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
 
 set yrange [0:15000]
 set output "hist_bino5.eps"
-plot "bino5.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"green" notitle
+plot "bino5.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
 
 set yrange [0:150000]
 set output "hist_bino6.eps"
-plot "bino6.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"green" notitle
+plot "bino6.dat" u (hist($1,width)):(1.0) smooth freq w boxes lc rgb"blue" notitle
