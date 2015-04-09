@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}
+[
+    xlabel={$x$} ylabel={pdf} minor tick num=2 
+]
+\addplot [red] table[x index=0, y index=1] {data.dat};
+\addplot [blue] table[x index=0, y index=2] {data.dat};
+\addplot [green] table [x index=0, y index=3] {data.dat};
+\addlegendentry{Binomial}  
+\end{axis}
+\end{tikzpicture}
+\end{document}
