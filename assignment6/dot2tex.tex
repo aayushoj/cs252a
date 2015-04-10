@@ -6,6 +6,7 @@
 \usepackage{pgfplots}
 \usepackage{dot2texi}
 \begin{document}
+\section{K5}
 \begin{tikzpicture}
   \begin{dot2tex}[circo, mathmode]
       graph G 
@@ -28,25 +29,31 @@
       D[shape="circle"];
       E[shape="circle"];
     }
+  \end{dot2tex}
+\end{tikzpicture}
+
+\section{K3,3}
+\begin{tikzpicture}
+  \begin{dot2tex}[circo, mathmode]
       graph G 
     {
         node [shape="circle", fixedsize=True, width="0.4" style="fill=blue!40"];
       edge[lblstyle="auto"];
-      A -- B [label=ab];
-      A -- C [label=ac];
+      A -- F [label=af];
       A -- D [label=ad];
       A -- E [label=ae];
-      B -- C [label=bc];
+      B -- F [label=bf];
       B -- D [label=bd];
       B -- E [label=be];
+      C -- F [label=cf];
       C -- D [label=cd];
-      C -- E [label=ce];
-      D -- E [label=de];
+      C -- E [label=de];
       A[shape="circle"];
       B[shape="circle"];
       C[shape="circle"];
       D[shape="circle"];
       E[shape="circle"];
+      F[shape="circle"];
     }
   \end{dot2tex}
 \end{tikzpicture}
